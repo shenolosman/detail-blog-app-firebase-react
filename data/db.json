@@ -1,0 +1,32 @@
+{
+  "BlogsJsonDB": [
+    {
+      "id": "1",
+      "title": "User focused software",
+      "categories": ["software", "CMS"],
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, eum quasi voluptatibus doloribus ipsam inventore delectus, nisi officia quaerat necessitatibus quia, et maiores? Voluptates dicta rem dolorem quas quam dolorum quasi soluta hic fugiat vitae tenetur, temporibus, delectus accusamus voluptate qui, ea ratione quia repellat consectetur expedita! Maxime, cupiditate iste?",
+      "readableTime": "10 mins"
+    },
+    {
+      "id": "2",
+      "title": "How to improve topics reading time",
+      "categories": ["SEO", "HTML"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nulla odit ea, quos temporibus est corporis at modi quia nemo laborum, eveniet quisquam quas dolorem! Dolore similique, earum magnam nisi doloribus tempore reprehenderit atque quis iste nostrum soluta tenetur enim voluptatum fuga. Velit iste illo amet repellat nemo quod perferendis suscipit non aliquam vitae, delectus omnis quia ratione vel quas, sed a possimus quam sint! Nulla voluptatum hic vitae architecto tempore itaque voluptatibus, modi numquam corporis fugit omnis labore vero libero molestiae cum, incidunt animi, impedit praesentium provident dolorum eligendi illum earum facere a? Mollitia voluptates aliquid consequatur dignissimos optio.",
+      "readableTime": "15 mins"
+    },
+    {
+      "id": "3",
+      "title": "Web development for whom?",
+      "categories": ["HTML", "CSS"],
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita esse iure voluptatem inventore optio pariatur aliquam similique aperiam impedit rem odio, possimus consectetur mollitia sunt temporibus totam harum exercitationem facere? Reiciendis ad earum soluta in harum nulla aspernatur ipsum labore voluptate aliquam, enim neque at quos, animi eveniet id, cumque odio asperiores exercitationem facilis ex autem delectus! Voluptatem reprehenderit saepe maxime dicta numquam consectetur quo est odit molestiae. Beatae impedit illum adipisci reiciendis consequatur omnis.",
+      "readableTime": "13 mins"
+    },
+    {
+      "id": "4",
+      "title": "Software as a service",
+      "categories": ["SaaS", "API"],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempora provident ullam, dolor sed earum velit in cumque adipisci porro, repellendus possimus reprehenderit et eaque sapiente. Quae soluta cupiditate asperiores velit? Maxime voluptatibus pariatur debitis id sequi, ab quae omnis nemo aliquid veritatis consectetur molestias facilis labore rem ipsum perspiciatis quo adipisci animi, dicta tempore. Rem ab consequatur maiores possimus obcaecati, molestias sunt, quidem consequuntur doloribus corporis ea excepturi laborum culpa cumque placeat enim veniam esse soluta qui illum corrupti fugit recusandae nam id. Ea corrupti nihil laudantium illo cupiditate inventore maxime magnam, aliquam commodi vitae repellendus, velit numquam nobis? Iure unde temporibus error mollitia laudantium, quis reiciendis. Tempore tenetur iure asperiores et eligendi at perferendis, maxime amet eius, quae magni omnis iusto sapiente dolores! Est voluptatum ab esse porro eaque saepe aut autem! Impedit, odit, aliquam error illo rerum est soluta veritatis ut reiciendis, maxime eveniet! Laudantium, quos tempore?",
+      "readableTime": "17 mins"
+    }
+  ]
+}

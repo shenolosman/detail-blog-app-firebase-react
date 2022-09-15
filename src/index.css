@@ -11,6 +11,8 @@ body {
   background: #dfdfdf;
   color: #333;
 }
+.App{
+min-height: 100%;}
 h1,
 h2,
 h3,
