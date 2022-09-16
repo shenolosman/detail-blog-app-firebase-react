@@ -3,10 +3,12 @@ import Home from "./pages/home/Home";
 import Create from "./pages/create/Create";
 import Blog from "./pages/blog/Blog";
 import Search from "./pages/search/Search";
+import {Navbar} from "./components"
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Home />
