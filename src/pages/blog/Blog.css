@@ -1,0 +1,48 @@
+.blog {
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+  background: #fff;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.time {
+  font-size: small;
+  color: orange;
+}
+
+.info {
+  text-align: left;
+  line-height: 1.5em;
+}
+
+.blog ul {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  margin-top: 0;
+}
+.blog li {
+  list-style-type: none;
+  margin-right: 10px;
+  color: #777;
+}
+.blog li::after {
+  content: " -";
+}
+
+.blog li:last-child::after {
+  content: "";
+}
+.loading,
+.error {
+  text-align: center;
+  margin: 4px auto;
+  color: #c33;
+}
+.page-title {
+  text-align: center;
+  margin: 40px auto;
+  color: orangered;
+}
