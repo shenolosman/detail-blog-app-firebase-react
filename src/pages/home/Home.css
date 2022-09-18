@@ -1,0 +1,6 @@
+.loading,
+.error {
+  text-align: center;
+  margin: 4px auto;
+  color: #c33;
+}
