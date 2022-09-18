@@ -1,5 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 import "./Create.css";
+
 const Create = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -8,9 +11,22 @@ const Create = () => {
   const [newCategory, setNewCategory] = useState("");
   const [categories, SetCategories] = useState([]);
   const categoryInput = useRef(null);
+
+  const { postData, data, error } = useFetch(
+    "http://localhost:8000/BlogsJsonDB",
+    "POST"
+  );
+  const history = useHistory();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(title, description, readableTime, categories);
+    postData({
+      title,
+      categories,
+      description,
+      readableTime: readableTime + " mins",
+    });
   };
 
   const handleAdd = (e) => {
@@ -23,6 +39,12 @@ const Create = () => {
     setNewCategory("");
     categoryInput.current.focus();
   };
+
+  useEffect(() => {
+    if (data) {
+      history.push("/");
+    }
+  }, [data]);
   return (
     <div className="create">
       <h2 className="page-title">Create new blog</h2>
