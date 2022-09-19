@@ -11,7 +11,6 @@ const Search = () => {
 
   const handleSearch = (e) => {
     var newSearch = e.currentTarget.value;
-    // console.log(newSearch)
     setWord(newSearch);
   };
 

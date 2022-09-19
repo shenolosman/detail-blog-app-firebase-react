@@ -1,12 +1,10 @@
 import React from "react";
 import "./Home.css";
-import useFetch from "../../hooks/useFetch";
 import BlogList from "../../components/BlogList";
+import { useCollection } from "../../hooks/useCollection";
 const Home = () => {
-  const { data, loading, error } = useFetch(
-    "http://localhost:8000/BlogsJsonDB"
-  );
-  //console.log(data);
+  const { documents: data, error, loading } = useCollection("BlogsJsonDB");
+
   return (
     <div className="home">
       {loading && <p className="loading">Loading...</p>}

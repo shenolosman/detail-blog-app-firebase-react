@@ -39,7 +39,7 @@ const useFetch = (url, method = "GET") => {
           console.log("Fetching aborted");
         } else {
           setLoading(false);
-          setError("Fetch is not seccussful,reason : ", error.message);
+          setError(`Fetch is not seccussful! Reason: ${error}`);
         }
       }
     };

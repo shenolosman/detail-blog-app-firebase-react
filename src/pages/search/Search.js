@@ -3,18 +3,21 @@ import useFetch from "../../hooks/useFetch";
 import { useLocation } from "react-router-dom";
 import BlogList from "../../components/BlogList";
 import "./Search.css";
+import { useCollection } from "../../hooks/useCollection";
 const Search = () => {
+  
   const queryString = useLocation().search;
   //console.log(queryString)
   const queryParams = new URLSearchParams(queryString);
   //console.log(queryParams)
   const query = queryParams.get("q");
-  //console.log(query)
+  console.log(query)
   // if(query===""){
 
   // }
-  const url = "http://localhost:8000/BlogsJsonDB?q=" + query;
-  const { data, loading, error } = useFetch(url);
+  // const url = "http://localhost:8000/BlogsJsonDB?q=" + query;
+  const { documents: data, error, loading } = useCollection(`BlogsJsonDB`,["title","==",`${query}`]);
+  // const { data, loading, error } = useFetch(url);
 
   return (
     <div>

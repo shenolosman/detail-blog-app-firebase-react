@@ -1,8 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef} from "react";
 import { useHistory } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
+// import useFetch from "../../hooks/useFetch";
 import "./Create.css";
 import {useTheme} from "../../hooks/useTheme"
+
+import {db} from "../../firebase/config"
+import {collection,addDoc} from "firebase/firestore"
 const Create = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -11,22 +14,21 @@ const Create = () => {
   const [newCategory, setNewCategory] = useState("");
   const [categories, SetCategories] = useState([]);
   const categoryInput = useRef(null);
-
-  const { postData, data, error } = useFetch(
-    "http://localhost:8000/BlogsJsonDB",
-    "POST"
-  );
   const history = useHistory();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(title, description, readableTime, categories);
-    postData({
-      title,
-      categories,
-      description,
-      readableTime: readableTime + " mins",
-    });
+
+    const doc={title,categories,description,readableTime: readableTime + " mins"}
+
+    const ref=collection(db,"BlogsJsonDB")
+
+    try {
+      await addDoc(ref,{...doc})
+      history.push("/")
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   const handleAdd = (e) => {
@@ -40,11 +42,6 @@ const Create = () => {
     categoryInput.current.focus();
   };
 
-  useEffect(() => {
-    if (data) {
-      history.push("/");
-    }
-  }, [data]);
   const { mode } = useTheme();
   return (
     <div className={`create ${mode}`}>
