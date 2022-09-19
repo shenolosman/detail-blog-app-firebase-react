@@ -2,7 +2,8 @@
 
 To simulate json file as a db before creating connection between firebase, write in terminal : `npx json-server --watch data/db.json --port 8000`
 
-Now it hosted on firebase
+Now it hosted on firebase 
+installing firebase in react with `npm install firebase@9`
 
 Home page Image;
 ![Home image](/public/img/home.jpg "Home")
