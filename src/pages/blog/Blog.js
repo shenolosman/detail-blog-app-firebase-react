@@ -2,12 +2,14 @@ import React from 'react';
 import "./Blog.css"
 import { useParams } from 'react-router-dom';
 import useFetch from "../../hooks/useFetch"
+import {useTheme} from "../../hooks/useTheme"
 const Blog = () => {
+    const { mode } = useTheme();
     const {id}=useParams();
     const url=`http://localhost:8000/BlogsJsonDB/`+id;
     const {error,loading,data}=useFetch(url);
     return (
-        <div className='blog'>
+        <div className={`blog ${mode}`}>
             {error && <p className='error'>{error}</p>}
             {loading && <p className='loading'>Loading...</p>}
             {data &&(

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import "./Create.css";
-
+import {useTheme} from "../../hooks/useTheme"
 const Create = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -45,8 +45,9 @@ const Create = () => {
       history.push("/");
     }
   }, [data]);
+  const { mode } = useTheme();
   return (
-    <div className="create">
+    <div className={`create ${mode}`}>
       <h2 className="page-title">Create new blog</h2>
       <form onSubmit={handleSubmit}>
         <label>

@@ -1,5 +1,5 @@
 html,
-body {
+body, #root {
   height: 100%;
 }
 body {
@@ -11,8 +11,7 @@ body {
   background: #dfdfdf;
   color: #333;
 }
-.App{
-min-height: 100%;}
+
 h1,
 h2,
 h3,
@@ -40,5 +39,5 @@ textarea {
 .title {
   text-align: center;
   margin: 40px auto;
-  color: #786faa;
+  color: #ff4500;
 }

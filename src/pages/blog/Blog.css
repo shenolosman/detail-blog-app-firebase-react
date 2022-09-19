@@ -46,3 +46,8 @@
   margin: 40px auto;
   color: orangered;
 }
+
+.blog.dark {
+  background: #555;
+  color: #e4e4e4;
+}

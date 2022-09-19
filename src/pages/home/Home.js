@@ -6,7 +6,7 @@ const Home = () => {
   const { data, loading, error } = useFetch(
     "http://localhost:8000/BlogsJsonDB"
   );
-  console.log(data);
+  //console.log(data);
   return (
     <div className="home">
       {loading && <p className="loading">Loading...</p>}
