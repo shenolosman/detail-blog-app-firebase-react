@@ -2,6 +2,9 @@ import React from "react";
 import "./BlogList.css";
 import { Link } from "react-router-dom";
 const BlogList = ({ blogs }) => {
+
+  if(blogs.length===0){
+  return <div className="error">Search word not found</div>}
   return (
     <div className="blog-list">
       {blogs.map((item) => (

@@ -6,9 +6,15 @@ const Search = () => {
   const history = useHistory();
   const handleSubmit = (e) => {
     e.preventDefault();
-
     history.push(`/search?q=${word}`);
   };
+
+  const handleSearch = (e) => {
+    var newSearch = e.currentTarget.value;
+    // console.log(newSearch)
+    setWord(newSearch);
+  };
+
   return (
     <div className="searchbar">
       <form onSubmit={handleSubmit}>
@@ -16,7 +22,7 @@ const Search = () => {
           type="text"
           placeholder="Searching word..."
           id="search"
-          onChange={(e) => setWord(e.target.value)}
+          onChange={handleSearch}
         />
       </form>
     </div>

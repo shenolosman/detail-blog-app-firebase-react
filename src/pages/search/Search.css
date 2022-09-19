@@ -1,0 +1,11 @@
+.loading,
+.error {
+  text-align: center;
+  margin: 4px auto;
+  color: #c33;
+}
+.page-title {
+    text-align: center;
+    margin: 40px auto;
+    color: orangered;
+  }
